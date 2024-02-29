@@ -446,14 +446,14 @@ def _detect_peak_coordinate(
            (thresholded_hough_array[1:-1, 1:-1] >= thresholded_hough_array[1:-1, 0:-2]) * (thresholded_hough_array[1:-1, 1:-1] >= thresholded_hough_array[1:-1, 2:]) * \
            (thresholded_hough_array[1:-1, 1:-1] > 0)
     
-    print(peak_local)
+    #print(peak_local)
     peak_local = np.array(np.where(peak_local)) + 1  # peak_local: [ [rho1, rho2, ...], [theta1, theta2, ...] ]   
-    print(peak_local)
-    print()
+    #print(peak_local)
+    #print()
     peak_global = np.copy(peak_local)
     for i, t in enumerate(peak_local[1]):
         peak_global[1, i] = theta_array[t]
-    print(peak_global)
+    #print(peak_global)
     return peak_global
 
 def _calculate_theta_max(
