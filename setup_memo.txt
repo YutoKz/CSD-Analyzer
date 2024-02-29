@@ -1,0 +1,14 @@
+Docker上で学習する際のメモ
+
+1. 
+    DockerDesktop等で nvidia/cuda のイメージをプル。TAGは環境のOSに合わせるが、devel と付いたものを使用。
+2. 
+    cudaイメージからコンテナを生成
+    $ docker run -it -d --gpus all --name [コンテナ名(任意)] -v [プロジェクトフォルダの絶対パス]:/usr/CSD_Analyzer nvidia/cuda:[TAG] bash
+3. 
+    コンテナに入る
+    $ docker exec -it [先ほどのコンテナ名] bash
+4.
+    コンテナ内で
+    chmod +x setup_environment.sh
+    $ ./setup_environment.sh
