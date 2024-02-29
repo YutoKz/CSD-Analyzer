@@ -33,4 +33,5 @@
 
 ### 今後について
 - 追加のFine-tuning機能の追加
-- a
+- スライダーなどにより、パラメータ調整をしやすく
+    - 参考：https://qiita.com/oyngtmhr/items/15e54d55ef6b760e0bed
